@@ -41,3 +41,7 @@ app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
+
+{{- define "renovate-43198.fluxDefaults" -}}
+interval: 10m0s
+{{- end }}
